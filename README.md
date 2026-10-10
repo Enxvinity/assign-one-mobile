@@ -1,50 +1,70 @@
-# Welcome to your Expo app 👋
+# Spotify Mobile UI Clone
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This project is a mobile user interface clone of the Spotify app, built using React Native and Expo with TypeScript. It was developed to demonstrate proficiency in creating mobile layouts, utilizing Flexbox, managing scrollable views, and organizing code into reusable components.
 
-## Get started
+## Features
 
-1. Install dependencies
+- **High-Fidelity UI Match**: Accurately replicates the layout, colors, and typography of the provided Spotify screenshot using React Native's core components.
+- **Modular Component Architecture**: Utilizes reusable components (`PlaylistCard` and `AlbumCard`) to keep the main screen clean and maintainable.
+- **Horizontal & Vertical Scrolling**: Implements `ScrollView` for both the main vertical feed and the horizontal "Jump back in" album section.
+- **Sticky Mini-Player & Navigation**: Features a bottom mini-player and navigation bar that remain anchored while the main content scrolls underneath.
+- **Cross-Platform Event Handling**: Includes an interactive Alert button that works seamlessly across iOS, Android, and Web environments.
+
+## ⚠️ Important Note for Testing
+
+**If you are testing this application on an Android device, an iOS device, or any simulator with a smaller screen size, you will need to scroll down to the bottom of the main page to find the "Alert" button.** It is intentionally placed at the end of the scrollable content area to demonstrate vertical scrolling functionality.
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/)
+- [Expo CLI](https://docs.expo.dev/get-started/installation/)
+- Expo Go app on your physical mobile device (optional, for testing).
+
+## Installation and Setup
+
+1. **Clone the repository** (if applicable):
+
+   ```bash
+   git clone <your-repository-link>
+   cd <project-folder>
+   ```
+
+2. **Install dependencies**:
 
    ```bash
    npm install
    ```
 
-2. Start the app
-
+3. **Start the Expo server**:
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+## Running the Application
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Once the Expo development server is running, you can open the app in several ways:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- **Web**: Press `w` in the terminal to open the app in your local web browser.
+- **iOS Simulator**: Press `i` in the terminal (requires Xcode installed on macOS).
+- **Android Emulator**: Press `a` in the terminal (requires Android Studio installed).
+- **Physical Device**: Scan the QR code displayed in the terminal using the Expo Go app on your phone.
 
-## Get a fresh project
+## Project Structure
 
-When you're ready, run:
+- `app/index.tsx`: The main entry point and primary screen layout combining all UI elements.
+- `app/_layout.tsx`: The root Expo Router layout file.
+- `components/PlaylistCard.tsx`: Reusable component for displaying the two-column playlist grid items.
+- `components/AlbumCard.tsx`: Reusable component for displaying the horizontal scrolling album covers.
 
-```bash
-npm run reset-project
-```
+## Built With
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+- [React Native](https://reactnative.dev/)
+- [Expo](https://expo.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [@expo/vector-icons](https://docs.expo.dev/guides/icons/) (MaterialCommunityIcons)
+  <br>
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+> _Disclaimer: This README file was generated with the assistance of AI._
